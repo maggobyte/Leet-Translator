@@ -7,8 +7,14 @@ inputField.addEventListener('keydown', function(event){
     }
 });
 
+const replacements = {
+    'a':'b',
+    'b':'c'
+}
+
 function translateText(){
+    const regex = new RegExp(Object.keys(replacements).join('|'), 'g');
     const inputText = inputField.value;
-    const transformedText = inputText.toUpperCase();
+    const transformedText = inputText.replace(regex,(matched) => replacements[matched]);
     outputSpan.innerText = transformedText;
 }
