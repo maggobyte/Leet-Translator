@@ -61,3 +61,17 @@ main {
     box-sizing: border-box;
     align-self: flex-end;
 }
+.imgContainer{
+    position: fixed;
+    top: 48vh;
+    left: 46%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.img1{
+    width: 50%;
+    height: auto;
+    max-width: 1200px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
