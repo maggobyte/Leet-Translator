@@ -1,8 +1,15 @@
 const inputField = document.getElementById('userInput');
 const outputSpan = document.getElementById('output');
 
+inputField.addEventListener('input', function(event){
+    if (inputField.value.includes('\n')){
+        translateText();
+        inputField.value.replace('\n','');
+    }
+});
 inputField.addEventListener('keydown', function(event){
-    if (event.key == 'Enter'){
+    if (event.key === 'Enter'){
+        event.preventDefault();
         translateText();
     }
 });
